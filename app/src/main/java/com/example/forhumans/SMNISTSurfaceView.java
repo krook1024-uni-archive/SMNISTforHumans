@@ -73,8 +73,8 @@ public class SMNISTSurfaceView extends android.view.SurfaceView implements Runna
 
     int[] bgColor =
             {
-                    android.graphics.Color.rgb(49, 54, 59),
-                    android.graphics.Color.rgb(35, 38, 41)
+                    android.graphics.Color.rgb(67, 76, 94),
+                    android.graphics.Color.rgb(76, 86, 106)
             };
     int bgIdx = 0;
 
@@ -356,27 +356,28 @@ public class SMNISTSurfaceView extends android.view.SurfaceView implements Runna
     private void cinit(android.content.Context context) {
 
         textPaint.setColor(Color.WHITE);
-        textPaint.setStyle(android.graphics.Paint.Style.FILL_AND_STROKE);
+        //textPaint.setStyle(android.graphics.Paint.Style.FILL_AND_STROKE);
+        textPaint.setStyle(android.graphics.Paint.Style.FILL);
         textPaint.setAntiAlias(true);
         textPaint.setTextAlign(android.graphics.Paint.Align.CENTER);
         textPaint.setTextSize(50);
 
         msgPaint.setColor(Color.WHITE);
-        msgPaint.setStyle(android.graphics.Paint.Style.FILL_AND_STROKE);
+        msgPaint.setStyle(android.graphics.Paint.Style.FILL);
         msgPaint.setAntiAlias(true);
         msgPaint.setTextAlign(android.graphics.Paint.Align.LEFT);
         msgPaint.setTextSize(40);
 
         dotPaint.setColor(Color.WHITE);
-        dotPaint.setStyle(android.graphics.Paint.Style.FILL_AND_STROKE);
+        dotPaint.setStyle(android.graphics.Paint.Style.FILL);
         dotPaint.setAntiAlias(true);
         dotPaint.setTextAlign(android.graphics.Paint.Align.CENTER);
         dotPaint.setTextSize(50);
 
-        borderPaint.setStrokeWidth(2);
-        borderPaint.setColor(Color.BLACK);
+        //borderPaint.setStrokeWidth(2);
+        //borderPaint.setColor(Color.BLACK);
         fillPaint.setStyle(android.graphics.Paint.Style.FILL);
-        fillPaint.setColor(android.graphics.Color.rgb(75,180,235));
+        fillPaint.setColor(android.graphics.Color.rgb(94,129,172));
 
         surfaceHolder = getHolder();
 
@@ -455,8 +456,8 @@ public class SMNISTSurfaceView extends android.view.SurfaceView implements Runna
 
         for (int i = 0; i < 10; ++i) {
 
-            canvas.drawCircle(x + digitsCoords[2 * i], y + digitsCoords[2 * i + 1],
-                    40, borderPaint);
+            /*canvas.drawCircle(x + digitsCoords[2 * i], y + digitsCoords[2 * i + 1],
+                    40, borderPaint);*/
 
             canvas.drawCircle(x + digitsCoords[2 * i], y + digitsCoords[2 * i + 1],
                     38, fillPaint);
